@@ -1,0 +1,23 @@
+form {
+    border-radius: 8px;
+    background-color: bisque;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border: solid;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 181, 49);
+}
+
+::placeholder {
+    text-align: center;
+}
