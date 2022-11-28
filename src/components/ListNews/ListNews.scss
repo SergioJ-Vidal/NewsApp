@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
     width: 80vw;
+    gap: 20px;
     
 }
 
@@ -13,4 +13,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 14px;
+    gap: 10px;
+}
+
+.new-box {
+    background-color: rgb(77, 223, 187);
+    max-width: 30em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 8px;
+    border: solid black;
+    padding: 1em;
+}
+
+.news-painted {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }

@@ -6,23 +6,19 @@ export const Header = () => {
 
   return (
     <header className="App-header">
-      <h3>Personal Page</h3>
-      <div>
+      <h3>News Builder</h3>
         <div
           className="navigation-menu">
-          <ul>
-            <li>
+            <span>
               <a href="/">Home</a>
-            </li>
-            <li>
+            </span>
+            <span className='create-nav'>
               <a href="/form">Create New</a>
-            </li>
-            <li>
+            </span>
+            <span>
               <a href="/list">News Published</a>
-            </li>
-          </ul>
+            </span>
         </div>
-      </div>
     </header>
   )
 }

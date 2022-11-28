@@ -46,7 +46,6 @@ export const Form = () => {
   }, [data]);
 
   const handleInputChange = (event) => {
-    console.log(event.target.name)
     setData({
       ...data,
       [event.target.name]: event.target.value,
@@ -85,7 +84,7 @@ export const Form = () => {
         />
         <br />
         <textarea
-          type="textarea"
+          type="text"
           placeholder="Write New"
           value={data.body}
           onChange={handleInputChange}
@@ -93,8 +92,8 @@ export const Form = () => {
           rows="8"
           name="new"
         />
-        <button type="submit" disabled={btnDisabled}>
-          Enviar
+        <button className="send-btn" type="submit" disabled={btnDisabled}>
+          Send
         </button>
       </form>
       <p>{visible ? message : 'Redirecting to Home...'}</p>
