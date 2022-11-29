@@ -20,10 +20,16 @@ Por último, en la ruta de list se encuentra la llamada a una API externa que pi
 ## Tecnologías 🛠
 
 - React
+
+![image](/src/components/assets/react.png)
+
 - SASS
+
+![image](/src/components/assets/sass.png)
+
 - Axios
 
-![image](/assets/indexjs.png)
+![image](/src/components/assets/axios.png)
 
 
 ### Contacto 📖
