@@ -4,7 +4,6 @@ import axios from "axios";
 
 const initialState = {
     news: [],
-
 };
 
 export const GlobalContext = createContext(initialState);
@@ -26,7 +25,7 @@ export const GlobalProvider = ({ children }) => {
     return (
         <GlobalContext.Provider
         value={{
-          news: state.newsList,
+          news: state.news,
           getNews
         }}>
         {children}

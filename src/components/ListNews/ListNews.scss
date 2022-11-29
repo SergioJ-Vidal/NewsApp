@@ -15,12 +15,13 @@
     align-items: center;
     padding: 14px;
     gap: 10px;
+    background-color: #FFF8EA;
 }
 
 .new-box {
-    background-color: rgb(77, 223, 187);
+    background-color: #F5D5AE;
     max-width: 30em;
-    color: white;
+    color: rgb(27, 26, 26);
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -34,4 +35,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+.sent-btn {
+    border-radius: 20px;
 }

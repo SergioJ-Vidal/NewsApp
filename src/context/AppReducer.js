@@ -3,7 +3,7 @@ const getNews = (state, action) => {
       case "GET_NEWS":
         return {
           ...state,
-          newsList: action.payload,
+          news: action.payload,
           
         };
       default:

@@ -15,7 +15,10 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(201, 181, 49);
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    min-height: 520px;
+
 }
 
 ::placeholder {

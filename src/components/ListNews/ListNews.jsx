@@ -1,9 +1,7 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ListNews.scss';
 import axios from 'axios';
-import { GlobalContext } from "../../context/GlobalState";
-
-
+// import OneNew from './oneNew/OneNew'
 
 export const ListNews = () => {
   const [news, setNews] = useState([])
@@ -20,27 +18,21 @@ export const ListNews = () => {
     }
   };
 
-  // const getNews = useContext(GlobalContext);
-  // console.log(getNews)
-
   useEffect(() => {
     findNews()
   }, [])
-
-  // useEffect(() => {
-  //   getNews()
-  // }, [])
 
   const newsListado = news.map((resultNew) => {
     return (
       <div key={resultNew.id} className="new-container">
         <div className="new-box">
           <span className="title">{resultNew.title}</span>
+          
           <span className="date">{resultNew.published_date}</span>
           <span className="body">{resultNew.abstract}</span>
           <span className="author">{resultNew.byline}</span>
-          {resultNew?.multimedia?<img className="screens" src={resultNew?.multimedia[2].url} alt="" /> : null }
-          <a href={resultNew.url} target="_blank" rel="noopener noreferrer"> <button className="button" >
+          
+          <a href={resultNew.url} target="_blank" rel="noopener noreferrer"> <button className="sent-btn" >
               Read Full New
             </button></a>
         </div>
@@ -49,9 +41,22 @@ export const ListNews = () => {
   });
 
   return (<div className='list-body'>
-    <span>News Published List</span>
+    <h1>News Published List</h1>
     <div className='news-painted'>{newsListado}</div>
   </div>)
 
 }
 
+// export const ListNews = () => {
+
+//   return (
+
+//     <div>
+
+//       <OneNew />
+
+//     </div>
+
+//   )
+
+// }

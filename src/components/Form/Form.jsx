@@ -16,6 +16,8 @@ export const Form = () => {
 
     body: "",
 
+    image_url: "",
+
     publishDate: new Date()
 
   });
@@ -26,6 +28,8 @@ export const Form = () => {
     title: "",
 
     body: "",
+
+    image_url: "",
 
     publishDate: ""
   };
@@ -38,6 +42,10 @@ export const Form = () => {
 
     if (data.name.length < 3) {
       setMessage("Name must be at least 3 characters");
+      setMessage(null);
+      setBtnDisabled(false);
+    } else if (data.body.length < 150) {
+      setMessage("150 characteres needed for publish");
       setBtnDisabled(true);
     } else {
       setMessage(null);
@@ -65,38 +73,47 @@ export const Form = () => {
 
   return (
     <div>
-      <div className="form-container">Create News
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={data.name}
-          onChange={handleInputChange}
-          name="name"
-        />
-        <br />
-        <input
-          type="string"
-          placeholder="Title"
-          value={data.title}
-          onChange={handleInputChange}
-          name="title"
-        />
-        <br />
-        <textarea
-          type="text"
-          placeholder="Write New"
-          value={data.body}
-          onChange={handleInputChange}
-          cols="70" 
-          rows="8"
-          name="new"
-        />
-        <button className="send-btn" type="submit" disabled={btnDisabled}>
-          Send
-        </button>
-      </form>
-      <p>{visible ? message : 'Redirecting to Home...'}</p>
+      <div className="form-container">
+        <h1>Create News</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Name"
+            value={data.name}
+            onChange={handleInputChange}
+            name="name"
+          />
+          <br />
+          <input
+            type="string"
+            placeholder="Title"
+            value={data.title}
+            onChange={handleInputChange}
+            name="title"
+          />
+          <br />
+          <input
+            type="string"
+            placeholder="Image Url"
+            value={data.image_url}
+            onChange={handleInputChange}
+            name="title"
+          />
+          <br />
+          <textarea
+            type="text"
+            placeholder="Write New"
+            value={data.body}
+            onChange={handleInputChange}
+            cols="70"
+            rows="8"
+            name="new"
+          />
+          <button className="send-btn" type="submit" disabled={btnDisabled}>
+            Send
+          </button>
+        </form>
+        <p>{visible ? message : 'Redirecting to Home...'}</p>
       </div>
     </div>
   );
