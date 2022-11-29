@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ListNews.scss';
 import axios from 'axios';
-import logo from "../assets/fb-logo.png"
+import noticia from "../assets/noticia.jpg"
 // import OneNew from './oneNew/OneNew'
 
 export const ListNews = () => {
@@ -29,7 +29,7 @@ export const ListNews = () => {
         <div className="new-box">
           <h3 className="title">{resultNew.title}</h3>
           <span className="date">{resultNew.published_date}</span>
-          <img src={logo} className="new-image" alt="news"></img>
+          <img src={noticia} className="new-image" alt="news"></img>
           <span className="body">{resultNew.abstract}</span>
           <span className="author">{resultNew.byline}</span>
 

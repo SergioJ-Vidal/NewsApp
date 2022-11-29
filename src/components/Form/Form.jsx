@@ -40,9 +40,6 @@ export const Form = () => {
       setMessage("Name must be at least 3 characters");
       setMessage(null);
       setBtnDisabled(false);
-    } else if (data.body.length < 150) {
-      setMessage("150 characteres needed for publish");
-      setBtnDisabled(true);
     } else {
       setMessage(null);
       setBtnDisabled(false);
