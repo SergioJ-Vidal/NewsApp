@@ -1,1 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Bebas+Neue&display=swap');
+
+.make-box {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.view-box {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

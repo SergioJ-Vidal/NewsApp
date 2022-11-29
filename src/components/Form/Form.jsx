@@ -16,8 +16,6 @@ export const Form = () => {
 
     body: "",
 
-    image_url: "",
-
     publishDate: new Date()
 
   });
@@ -28,8 +26,6 @@ export const Form = () => {
     title: "",
 
     body: "",
-
-    image_url: "",
 
     publishDate: ""
   };
@@ -72,7 +68,7 @@ export const Form = () => {
 
 
   return (
-    <div>
+    <div className="main">
       <div className="form-container">
         <h1>Create News</h1>
         <form onSubmit={handleSubmit}>
@@ -88,14 +84,6 @@ export const Form = () => {
             type="string"
             placeholder="Title"
             value={data.title}
-            onChange={handleInputChange}
-            name="title"
-          />
-          <br />
-          <input
-            type="string"
-            placeholder="Image Url"
-            value={data.image_url}
             onChange={handleInputChange}
             name="title"
           />

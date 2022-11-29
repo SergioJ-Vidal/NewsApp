@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ListNews.scss';
 import axios from 'axios';
+import logo from "../assets/fb-logo.png"
 // import OneNew from './oneNew/OneNew'
 
 export const ListNews = () => {
@@ -26,17 +27,17 @@ export const ListNews = () => {
     return (
       <div key={resultNew.id} className="new-container">
         <div className="new-box">
-          <span className="title">{resultNew.title}</span>
-          
+          <h3 className="title">{resultNew.title}</h3>
           <span className="date">{resultNew.published_date}</span>
+          <img src={logo} className="new-image" alt="news"></img>
           <span className="body">{resultNew.abstract}</span>
           <span className="author">{resultNew.byline}</span>
-          
+
           <a href={resultNew.url} target="_blank" rel="noopener noreferrer"> <button className="sent-btn" >
-              Read Full New
-            </button></a>
+            Read Full New
+          </button></a>
         </div>
-        </div>
+      </div>
     );
   });
 
